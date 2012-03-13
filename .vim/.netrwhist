@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/christianverkerk/Sites/debabysitservice-nl/debabysitservice'
+let g:netrw_dirhist_2='/Users/christianverkerk/Sites/workshop2'
+let g:netrw_dirhist_3='/Users/christianverkerk/Downloads/advpython2'
+let g:netrw_dirhist_4='/Users/christianverkerk/Sites/workshop3/advpython2'
