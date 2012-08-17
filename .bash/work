@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Work related
+export NIMBULA_API="https://api.usdev290.nimbula"
+export NIMBULA_USER="root/root"

@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+
+
+# Listing
+alias ll='ls -alF'
+alias la='ls -A'
+
+# Extraction of various compression formats (from gh/madhums/dotfiles)
+extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)  tar xjf $1       ;;
+            *.tar.gz)   tar xzvf $1      ;;
+            *.bz2)      bunzip2 $1       ;;
+            *.rar)      rar x $1         ;;
+            *.gz)       gunzip $1        ;;
+            *.tar)      tar xvf $1       ;;
+            *.tbz2)     tar xjvf $1      ;;
+            *.tgz)      tar xzvf $1      ;;
+            *.zip)      unzip $1         ;;
+            *.Z)        uncompress $1    ;;
+            *)          echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# Git (from gh/madhums/dotfiles)
+alias glg='git log --graph --pretty=format:"%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative'
+
+# Show the SSH key quickly (from gh/madhums/dotfiles)
+showsshkey(){
+  cat ~/.ssh/id_rsa.pub
+}
+
+# Edit hosts file
+edithosts(){
+  sudo $EDITOR /etc/hosts
+}
+
+# Show the IP addresses of this machine, with each interface that the address is on. (from gh/madhums/dotfiles)
+myip () {
+  local interface=""
+  local types='vmnet|en|eth|vboxnet'
+  local i
+  for i in $(
+    ifconfig \
+    | egrep -o '(^('$types')[0-9]|inet (addr:)?([0-9]+\.){3}[0-9]+)' \
+    | egrep -o '(^('$types')[0-9]|([0-9]+\.){3}[0-9]+)' \
+    | grep -v 127.0.0.1
+  ); do
+    if ! [ "$( echo $i | perl -pi -e 's/([0-9]+\.){3}[0-9]+//g' )" == "" ]; then
+      interface="$i":
+    else
+      echo $interface $i
+    fi
+  done
+}

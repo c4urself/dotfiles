@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+
+# Z for completing cd and jumping around directories
+source ~/.bash/utilities/z.sh
+
+# Easy git completion
+source ~/.bash/utilities/git-completion.bash
