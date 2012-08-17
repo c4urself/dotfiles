@@ -1,0 +1,15 @@
+[submodule ".vim/bundle/jshint.vim"]
+	path = .vim/bundle/jshint.vim
+	url = http://github.com/walm/jshint.vim
+[submodule ".vim/bundle/vundle"]
+	path = .vim/bundle/vundle
+	url = http://github.com/gmarik/vundle.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = http://github.com/ervandew/supertab
+[submodule "vim-jsbeautify"]
+	path = vim-jsbeautify
+	url = http://github.com/maksimr/vim-jsbeautify
+[submodule ".vim/bundle/vim-jsbeautify"]
+	path = .vim/bundle/vim-jsbeautify
+	url = http://github.com/maksimr/vim-jsbeautify
