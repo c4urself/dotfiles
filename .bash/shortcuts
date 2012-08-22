@@ -30,7 +30,7 @@ extract () {
 alias glg='git log --graph --pretty=format:"%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative'
 
 # Show the SSH key quickly (from gh/madhums/dotfiles)
-showsshkey(){
+sshkey(){
   cat ~/.ssh/id_rsa.pub
 }
 

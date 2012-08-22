@@ -5,4 +5,4 @@
 source ~/.bash/utilities/z.sh
 
 # Easy git completion
-source ~/.bash/utilities/git-completion.bash
+#source ~/.bash/utilities/git-completion.bash
