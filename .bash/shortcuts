@@ -1,6 +1,20 @@
 #!/usr/bin/env bash
 
 
+# One of @janmoesen’s ProTip™s
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+    alias "$method"="lwp-request -m '$method'"
+done
+
+# Usage: `json '{"foo":42}'` or `echo '{"foo":42}' | json`
+json () {
+    if [ -t 0 ]; then # argument
+        python -mjson.tool <<< "$*" | pygmentize -l javascript
+    else # pipe
+        python -mjson.tool | pygmentize -l javascript
+    fi
+}
+
 # Listing
 alias ll='ls -alF'
 alias la='ls -A'
