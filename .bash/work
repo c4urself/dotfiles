@@ -3,3 +3,16 @@
 # Work related
 export NIMBULA_API="https://api.usdev290.nimbula"
 export NIMBULA_USER="root/root"
+
+alias na=nimbula-api
+
+complete -W 'update,get,list' nimbula-api
+
+naconf () {
+    echo "NIMBULA_API: $NIMBULA_API";
+    echo "NIMBULA_USER: $NIMBULA_USER";
+}
+
+deleteorchestrations () {
+  for orchestration in `na -uroot/root list orchestration /root/root -Fname `; do echo "Deleting $orchestration"; na -uroot/root delete orchestration $orchestration; done
+}
