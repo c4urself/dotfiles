@@ -12,3 +12,6 @@ source ~/.bash/utils
 
 # Various aliases
 source ~/.bash/shortcuts
+
+# Various exports
+source ~/.bash/exports
