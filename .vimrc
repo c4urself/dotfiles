@@ -1,6 +1,8 @@
 " dispense with old vi compatibility attempts
 set nocompatible
-" required for Vundle
+
+" required for Vundle, note turning it on then off due to non-zero exit status
+filetype on
 filetype off        
 
 " Pathogen
@@ -12,7 +14,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'ervandew/supertab'
+" Bundles which vundle automatically tracks/installs
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'

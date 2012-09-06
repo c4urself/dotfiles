@@ -26,4 +26,4 @@
     changed = green
     untracked = cyan
 [core]
-    editor = vim
+    editor = /usr/bin/vim
