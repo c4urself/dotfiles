@@ -5,6 +5,7 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/git/bin
 export PATH=$PATH:/usr/X11/bin
 export PATH=$PATH:/opt/local/sbin
+export PATH=$PATH:/opt/local/bin
 
 # Ruby stuff
 export GEM_HOME=~/.gems
