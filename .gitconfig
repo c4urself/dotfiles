@@ -3,6 +3,7 @@
     email = christianverkerk@gmail.com
 [alias]
     st = status
+	unstage = reset HEAD --
 [github]
     name = c4urself
     token = fde7f945f79651ced8703eb846d55edb
