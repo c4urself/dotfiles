@@ -16,7 +16,7 @@ json () {
 }
 
 # Listing
-alias ll='ls -alF'
+alias ll='ls -larthF'
 alias la='ls -A'
 
 # Extraction of various compression formats (from gh/madhums/dotfiles)
