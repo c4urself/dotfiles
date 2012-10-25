@@ -16,3 +16,24 @@ naconf () {
 deleteorchestrations () {
   for orchestration in `na -uroot/root list orchestration /root/root -Fname `; do echo "Deleting $orchestration"; na -uroot/root delete orchestration $orchestration; done
 }
+
+naset () {
+    echo -n "Setting NIMBULA_API. [Enter for '$NIMBULA_API'] https://";
+    read API;
+    if [[ -z "${API}" ]]; then
+        echo "-> Unchanged"
+    else
+        export NIMBULA_API=https://$API;
+        echo "-> Set"
+    fi
+    echo -n "Setting NIMBULA_USER. [Enter for '$NIMBULA_USER'] ";
+    read USER;
+    if [[ -z "${USER}" ]]; then
+        echo "-> Unchanged"
+    else
+        export NIMBULA_USER=$USER;
+        echo "-> Set"
+    fi
+    na authenticate $NIMBULA_USER;
+    clear;
+}
