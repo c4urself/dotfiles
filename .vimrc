@@ -1,39 +1,10 @@
 " dispense with old vi compatibility attempts
 set nocompatible
 
-" required for Vundle, note turning it on then off due to non-zero exit status
-filetype on
-filetype off        
-
-" Pathogen
-"call pathogen#infect()
-"call pathogen#helptags()
-"call pathogen#runtime_append_all_bundles()
-
-" Vundle (alternative to Pathogen)
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Bundles which vundle automatically tracks/installs
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdtree'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'wincent/Command-T'
-Bundle 'walm/jshint.vim'
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'einars/js-beautify'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'groenewege/vim-less'
-
-
-" set path to js-beautify file
-let g:jsbeautify = {'indent_size': 4, 'indent_char': ' '}
-let g:htmlbeautify = {'indent_size': 4, 'indent_char': ' ', 'max_char': 78, 'brace_style': 'expand', 'unformatted': ['a', 'sub', 'sup', 'b', 'i', 'u']}
-let g:cssbeautify = {'indent_size': 4, 'indent_char': ' '}
-
+" call pathogen so all bundles can be installed in the .vim/bundles directory
+call pathogen#infect()
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
 
 " mapleader key is now the comma
 let mapleader=","
@@ -44,19 +15,14 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " hide buffers
 set hidden
-set so=7
-
-" Configure backspace so it acts as it should act
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
 
 " autodetect filetype and load relevant plugins and indentation
 filetype plugin indent on
 
-set number           " show line numbers
-set numberwidth=5    " numbering line width
+set number     		" show line numbers
+set numberwidth=5   " numbering line width
 "set relativenumber  " show line numbers relative to cursor
-set showmatch        " show matching parenthesis
+set showmatch 		" show matching parenthesis
 
 " whitespace stuff
 set nowrap
@@ -64,7 +30,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set smarttab
+autocmd BufWritePre *.js :%s/\s\+$//e
 
 " search stuff
 set hlsearch
@@ -72,18 +38,11 @@ set incsearch
 set ignorecase
 set smartcase
 
-set ai "Auto indent
-"set si "Smart indent
-let g:js_indent_log = 1
-
 " easy window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-" tab for autocomplete
-imap <`> <C-P>
 
 " skip shift
 nnoremap ; :
@@ -110,10 +69,7 @@ set directory=~/.vim/backup
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-" Turn NERDTree on/off with ,n
 map <leader>n :NERDTreeToggle<CR>
-" Show dotfiles
-let NERDTreeShowHidden=1
 
 " JSHint
 map <leader>js :JSHint<CR>
@@ -123,15 +79,13 @@ au BufNewFile,BufRead *.json set ft=javascript
 
 " add django template
 au BufNewFile,BufRead *.tmpl set ft=htmldjango
-au BufNewFile,BufRead *.html set ft=html
+au BufNewFile,BufRead *.html set ft=htmldjango
 au BufNewFile,BufRead *.template set ft=htmldjango
 
 " add less syntax highlighting
 au BufNewFile,BufRead *.less set ft=less
 
-syntax enable
-set background=dark
-colorscheme oceandeep
+colorscheme molokai
 
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
