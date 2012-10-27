@@ -3,20 +3,29 @@
 # Work related
 export NIMBULA_API="https://api.usdev290.nimbula"
 export NIMBULA_USER="root/root"
-
 alias na=nimbula-api
 
-complete -W 'update,get,list' nimbula-api
 
+#
+# Delete all orchestrations
+#
+deleteorchestrations () {
+  for orchestration in `na -uroot/root list orchestration /root/root -Fname `; do echo "Deleting $orchestration"; na -uroot/root delete orchestration $orchestration; done
+}
+
+
+#
+# Show NIMBULA env properties
+#
 naconf () {
     echo "NIMBULA_API: $NIMBULA_API";
     echo "NIMBULA_USER: $NIMBULA_USER";
 }
 
-deleteorchestrations () {
-  for orchestration in `na -uroot/root list orchestration /root/root -Fname `; do echo "Deleting $orchestration"; na -uroot/root delete orchestration $orchestration; done
-}
 
+#
+# Set NIMBULA env properties
+#
 naset () {
     echo -n "Setting NIMBULA_API. [Enter for '$NIMBULA_API'] https://";
     read API;
@@ -36,4 +45,24 @@ naset () {
     fi
     na authenticate $NIMBULA_USER;
     clear;
+}
+
+
+#
+# Use: gitcontribution "Christian Verkerk" "2 weeks ago"
+#
+gitcontribution () {
+    author="$1";
+    timeago="$2";
+    echo -n "\e[01;32m$author\e[00m:\n";
+    git log --shortstat --author $author --since $timeago | grep "files changed" | awk '{files+=$1; inserted+=$4; deleted+=$6} END {print "files changed", files, "lines inserted:", inserted, "lines deleted:", deleted}'
+}
+
+
+#
+# Use: gitcontributed "2 weeks ago"
+#
+gitcontributed () {
+    echo "Getting contributions from: $1";
+    for author in 'Ruben Stolk' 'Christian Verkerk' 'Pratik Vyas' 'Madhusudan Srinivasa' 'Samyak Bhuta' 'Bill Pieterouiski'; do gitcontribution $author $1; done;
 }
