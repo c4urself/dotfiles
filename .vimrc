@@ -65,6 +65,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set smarttab
+autocmd BufWritePre *.js :%s/\s\+$//e
 
 " search stuff
 set hlsearch
