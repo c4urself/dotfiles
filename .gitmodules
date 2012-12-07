@@ -13,3 +13,12 @@
 [submodule ".vim/bundle/vim-jsbeautify"]
 	path = .vim/bundle/vim-jsbeautify
 	url = http://github.com/maksimr/vim-jsbeautify
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/command-t"]
+	path = .vim/bundle/command-t
+	url = git://github.com/wincent/Command-T.git
+[submodule ".vim/bundle/js-beautify"]
+	path = .vim/bundle/js-beautify
+	url = git://github.com/maksimr/vim-jsbeautify.git
