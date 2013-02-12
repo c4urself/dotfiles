@@ -98,6 +98,9 @@ let CommandTMaxFiles = 20000
 " insert line above without insert mode
 map O O<ESC>
 
+" json prettifier
+map <leader>jt  <Esc>:%!python -m json.tool<CR>
+
 " force use of vim move keys
 "map <up> <nop>
 "map <down> <nop>
