@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-
+#!/usr/bin/env bash 
 # Work related
 export NIMBULA_API="https://api.usdev290.nimbula"
 export NIMBULA_USER="root/root"
@@ -19,7 +18,7 @@ deleteorchestrations () {
 #
 naconf () {
     echo "NIMBULA_API: $NIMBULA_API";
-    echo "NIMBULA_USER: $NIMBULA_USER";
+   echo "NIMBULA_USER: $NIMBULA_USER";
 }
 
 
@@ -72,12 +71,18 @@ gitcontributed () {
 # Proxy stuff
 #
 im_at_work () {
-    export ALL_PROXY=http://www-proxy.us.oracle.com
+    export ALL_PROXY=http://www-proxy.us.oracle.com:80/
     export http_proxy=$ALL_PROXY
+    export https_proxy=$ALL_PROXY
+    export HTTPS_PROXY=$ALL_PROXY
     sudo sed -i '/oracle/s/^#\ //' /etc/apt/apt.conf.d/00proxy
 }
 
 im_at_home () {
     export ALL_PROXY=''
+    export HTTPS_PROXY=''
+    export http_proxy=''
+    export https_proxy=''
     sudo sed -i '/^#/!s/^/#\ /' /etc/apt/apt.conf.d/00proxy
 }
+

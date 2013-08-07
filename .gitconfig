@@ -3,7 +3,8 @@
     email = christianverkerk@gmail.com
 [alias]
     st = status
-	unstage = reset HEAD --
+    unstage = reset HEAD --
+    diffl = "!git diff --color=always | less -r"
 [github]
     name = c4urself
     token = fde7f945f79651ced8703eb846d55edb
@@ -28,3 +29,7 @@
     untracked = cyan
 [core]
     editor = /usr/bin/vim
+[http]
+    proxy = http://www-proxy.us.oracle.com:80/
+[https]
+    proxy = http://www-proxy.us.oracle.com:80/
