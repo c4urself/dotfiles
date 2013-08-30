@@ -5,6 +5,7 @@
     st = status
     unstage = reset HEAD --
     diffl = "!git diff --color=always | less -r"
+    commitlazy = "!git commit -am \"$(curl -s http://whatthecommit.com/index.txt)\""¬
 [github]
     name = c4urself
     token = fde7f945f79651ced8703eb846d55edb
