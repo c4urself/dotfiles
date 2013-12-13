@@ -7,6 +7,7 @@
     diffl = "!git diff --color=always | less -r"
     commitlazy = "!git commit -am \"$(curl -s http://whatthecommit.com/index.txt)\""¬
     pop = "!git reset HEAD~1 && git stash && git pull && git stash pop"
+    pullup = "!git pull origin develop && git remote update origin && git submodule update"
     ci = commit
 [github]
     name = c4urself
