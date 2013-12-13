@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+alias grep='grep -I -n'
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
