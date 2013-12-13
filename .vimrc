@@ -68,10 +68,8 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set smarttab
-autocmd BufWritePre *.js :%s/\s\+$//e
-autocmd BufWritePre *.css :%s/\s\+$//e
-autocmd BufWritePre *.less :%s/\s\+$//e
-autocmd BufWritePre *.html :%s/\s\+$//e
+
+autocmd BufWritePre * :%s/\s\+$//e
 
 " search stuff
 set hlsearch
