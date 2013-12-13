@@ -50,7 +50,7 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 " Show a line at 81 to follow PEP and standards of limitig text to 80 cols
-set colorcolumn=81
+set colorcolumn=120
 
 " autodetect filetype and load relevant plugins and indentation
 filetype plugin indent on
@@ -148,8 +148,6 @@ syntax enable
 set background=dark
 colorscheme oceandeep
 set anti
-
-" Highlight for color column (must come after colorscheme)
 
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
