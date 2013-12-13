@@ -153,8 +153,6 @@ colorscheme oceandeep
 set anti
 
 " Highlight for color column (must come after colorscheme)
-highlight ColorColumn ctermbg=SlateGray guibg=SlateGray
-
 
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
