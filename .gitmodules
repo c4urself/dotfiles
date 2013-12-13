@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/js-beautify"]
 	path = .vim/bundle/js-beautify
 	url = git://github.com/maksimr/vim-jsbeautify.git
+[submodule ".vim/bundle/python-mode"]
+	path = .vim/bundle/python-mode
+	url = https://github.com/klen/python-mode.git
