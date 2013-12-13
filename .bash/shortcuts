@@ -19,6 +19,7 @@ json () {
 # Listing
 alias ll='ls -larthF'
 alias la='ls -A'
+alias xl='xmllint --format'
 
 # Extraction of various compression formats (from gh/madhums/dotfiles)
 extract () {
