@@ -30,4 +30,5 @@
     untracked = cyan
 [core]
     editor = /usr/bin/vim
+    pager = "less -s"
 	excludesfile = ~/.gitignore
