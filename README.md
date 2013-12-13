@@ -12,6 +12,8 @@ fun stuff including [git completion](https://blogs.oracle.com/linuxnstuff/entry/
 
     $ git clone git://github.com/c4urself/dotfiles.git
     $ cd dotfiles
+    $ git submodule init
+    $ git submodule update
     $ ./golive.sh
 
 ## Notes
