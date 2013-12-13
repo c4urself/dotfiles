@@ -17,7 +17,6 @@ call vundle#rc()
 " Bundles which vundle automatically tracks/installs
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdtree'
 Bundle 'wincent/Command-T'
 Bundle 'walm/jshint.vim'
 Bundle 'maksimr/vim-jsbeautify'
