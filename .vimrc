@@ -26,6 +26,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'klen/python-mode'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 
 " set path to js-beautify file
@@ -41,6 +42,9 @@ let mapleader=","
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" toggle indent guides
+nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
+
 " hide buffers
 set hidden
 set so=7
@@ -51,6 +55,12 @@ set whichwrap+=<,>,h,l
 
 " Show a line at 81 to follow PEP and standards of limitig text to 80 cols
 set colorcolumn=120
+
+" Indent guide colors
+let g:indent_guides_color_change_percent = 5
+let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 
 " autodetect filetype and load relevant plugins and indentation
 filetype plugin indent on
