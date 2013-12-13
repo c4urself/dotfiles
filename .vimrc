@@ -27,6 +27,7 @@ Bundle 'einars/js-beautify'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
+Bundle 'kchmck/vim-coffee-script'
 
 
 " set path to js-beautify file
