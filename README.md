@@ -5,7 +5,7 @@ fun stuff including [git completion](https://blogs.oracle.com/linuxnstuff/entry/
 
 ### Todos
 
-* Have to figure out submodules and vundle 
+* Have to figure out submodules and vundle
 * Want to add gitflow stuff
 
 ## Installation
@@ -15,6 +15,14 @@ fun stuff including [git completion](https://blogs.oracle.com/linuxnstuff/entry/
     $ git submodule init
     $ git submodule update
     $ ./golive.sh
+
+## Vundle
+
+Adding bundles so that it stays in the dotfiles and a simple clone and golive is the
+only thing necessary to get up and running on a new machine:
+
+Run `:BundleInstall` to checkout bundles into `.vim/bundle/` when first adding them
+Run `git submodule add <bundle_git_remote> .vim/bundle/<bundle_name>` to add them to the repo permanently
 
 ## Notes
 
