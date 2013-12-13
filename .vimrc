@@ -28,6 +28,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'klen/python-mode'
 
 
 " set path to js-beautify file
@@ -138,6 +139,10 @@ au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.tmpl set ft=htmldjango
 au BufNewFile,BufRead *.html set ft=html
 au BufNewFile,BufRead *.template set ft=htmldjango
+
+" Python mode stuff (testing for now)
+let g:pymode_folding = 0
+let g:pymode_lint_checker = "pyflakes"
 
 " add less syntax highlighting
 au BufNewFile,BufRead *.less set ft=less
