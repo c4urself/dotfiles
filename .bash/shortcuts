@@ -1,6 +1,17 @@
 #!/usr/bin/env bash
 
+_date () {
+  for last in $@; do :; done
+  if [[ $last =~ m.*d.*Y ]]
+  then
+    \date "incorrect"
+  else
+    \date "$@"
+  fi
+}
+
 alias top=htop
+alias date=_date
 alias grep='grep -I -n'
 
 # One of @janmoesen’s ProTip™s
