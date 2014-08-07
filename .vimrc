@@ -27,6 +27,8 @@ Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'klen/python-mode'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'scrooloose/nerdtree'
+Bundle 'derekwyatt/vim-scala'
 
 
 " set path to js-beautify file
