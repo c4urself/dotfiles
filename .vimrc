@@ -11,25 +11,27 @@ filetype off
 "call pathogen#runtime_append_all_bundles()
 
 " Vundle (alternative to Pathogen)
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Bundles which vundle automatically tracks/installs
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-surround'
-Bundle 'wincent/Command-T'
-Bundle 'walm/jshint.vim'
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'einars/js-beautify'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'groenewege/vim-less'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'klen/python-mode'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'scrooloose/nerdtree'
-Bundle 'derekwyatt/vim-scala'
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-surround'
+Plugin 'wincent/Command-T'
+Plugin 'walm/jshint.vim'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'groenewege/vim-less'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'klen/python-mode'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'scrooloose/nerdtree'
+Plugin 'derekwyatt/vim-scala'
 
+call vundle#end()
+filetype plugin ident on
 
 " set path to js-beautify file
 let g:jsbeautify = {'indent_size': 4, 'indent_char': ' '}

@@ -2,7 +2,7 @@
 	path = .vim/bundle/jshint.vim
 	url = http://github.com/walm/jshint.vim
 [submodule ".vim/bundle/vundle"]
-	path = .vim/bundle/vundle
+	path = .vim/bundle/Vundle.vim
 	url = http://github.com/gmarik/vundle.git
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
