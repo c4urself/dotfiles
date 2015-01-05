@@ -1,6 +1,6 @@
 [user]
     name = Christian Verkerk
-    email = christianverkerk@gmail.com
+    email = christian@tubularlabs.com
 [alias]
     st = status
     unstage = reset HEAD --
@@ -9,6 +9,7 @@
     pop = "!git reset HEAD~1 && git stash && git pull && git stash pop"
     pullup = "!git pull origin develop && git remote update origin && git submodule update"
     ci = commit
+    up = "!git remote update -p; git merge --ff-only @{u}"
 [github]
     name = c4urself
     token = fde7f945f79651ced8703eb846d55edb

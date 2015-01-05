@@ -1,2 +1,8 @@
 .vim/backup
 .DS_Store
+.csshrc
+.Trash
+.s3cfg
+id_rsa
+*.pem
+
