@@ -10,6 +10,7 @@
     pullup = "!git pull origin develop && git remote update origin && git submodule update"
     ci = commit
     up = "!git remote update -p; git merge --ff-only @{u}"
+    mergelog = "!f() { git log --stat \"$1^..$1\"; }; f"
 [github]
     name = c4urself
     token = fde7f945f79651ced8703eb846d55edb
