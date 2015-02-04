@@ -158,6 +158,7 @@ let g:pymode_lint_checker = "pyflakes"
 
 " add less syntax highlighting
 au BufNewFile,BufRead *.less set ft=less
+au BufNewFile,BufRead *.hql set ft=sql
 
 syntax enable
 set background=dark
