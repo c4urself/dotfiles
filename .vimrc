@@ -82,7 +82,8 @@ set softtabstop=2
 set expandtab
 set smarttab
 
-autocmd BufWritePre * :%s/\s\+$//e
+let blacklist = ['markdown']
+autocmd BufWritePre * if index(blacklist, &ft) < 0 | :%s/\s\+$//e
 
 " search stuff
 set hlsearch
