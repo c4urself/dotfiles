@@ -3,12 +3,7 @@ set nocompatible
 
 " required for Vundle, note turning it on then off due to non-zero exit status
 filetype on
-filetype off        
-
-" Pathogen
-"call pathogen#infect()
-"call pathogen#helptags()
-"call pathogen#runtime_append_all_bundles()
+filetype off
 
 " Vundle (alternative to Pathogen)
 set rtp+=~/.vim/bundle/Vundle.vim
