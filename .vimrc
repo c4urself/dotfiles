@@ -6,32 +6,31 @@ filetype on
 filetype off
 
 " Vundle (alternative to Pathogen)
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 " Bundles which vundle automatically tracks/installs
-Plugin 'gmarik/vundle'
-Plugin 'tpope/vim-surround'
-Plugin 'wincent/Command-T'
-Plugin 'walm/jshint.vim'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'einars/js-beautify'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'groenewege/vim-less'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'klen/python-mode'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'scrooloose/nerdtree'
-Plugin 'derekwyatt/vim-scala'
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-markdown'
+Bundle 'wincent/Command-T'
+Bundle 'walm/jshint.vim'
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'einars/js-beautify'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'groenewege/vim-less'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'klen/python-mode'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'scrooloose/nerdtree'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'digitaltoad/vim-jade'
 
-call vundle#end()
-filetype plugin ident on
-
-" set path to js-beautify file
-let g:jsbeautify = {'indent_size': 4, 'indent_char': ' '}
-let g:htmlbeautify = {'indent_size': 4, 'indent_char': ' ', 'max_char': 78, 'brace_style': 'expand', 'unformatted': ['a', 'sub', 'sup', 'b', 'i', 'u']}
-let g:cssbeautify = {'indent_size': 4, 'indent_char': ' '}
+" set patv tv js-beautify file
+" let g:jsbeautify = {'indent_size': 4, 'indent_char': ' '}
+" let g:htmlbeautify = {'indent_size': 4, 'indent_char': ' ', 'max_char': 78, 'brace_style': 'expand', 'unformatted': ['a', 'sub', 'sup', 'b', 'i', 'u']}
+" let g:cssbeautify = {'indent_size': 4, 'indent_char': ' '}
 
 
 " mapleader key is now the comma
