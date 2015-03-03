@@ -37,7 +37,7 @@ Bundle 'digitaltoad/vim-jade'
 let mapleader=","
 
 " easily edit and save your .vimrc (Derek Wyatt)
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>e :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " toggle indent guides
