@@ -52,7 +52,7 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 " Show a line at 81 to follow PEP and standards of limitig text to 80 cols
-set colorcolumn=120
+set colorcolumn=101
 
 " Indent guide colors
 let g:indent_guides_color_change_percent = 5
