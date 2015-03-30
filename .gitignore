@@ -4,5 +4,6 @@
 .Trash
 .s3cfg
 id_rsa
+.irssi
 *.pem
 
