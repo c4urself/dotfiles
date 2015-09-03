@@ -154,6 +154,9 @@ let g:pymode_lint_checker = "pyflakes"
 au BufNewFile,BufRead *.less set ft=less
 au BufNewFile,BufRead *.hql set ft=sql
 
+" add yaml syntax highlighting for salt
+au BufNewFile,BufRead *.sls set ft=yaml
+
 syntax enable
 set background=dark
 colorscheme oceandeep
