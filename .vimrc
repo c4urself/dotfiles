@@ -6,7 +6,7 @@ filetype on
 filetype off
 
 " Vundle (alternative to Pathogen)
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " Bundles which vundle automatically tracks/installs
