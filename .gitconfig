@@ -10,7 +10,7 @@
     pop = "!git reset HEAD~1 && git stash && git pull && git stash pop"
     pullup = "!git pull origin develop && git remote update origin && git submodule update"
     bump = "!git add tubecore && git commit -m \":cherry_blossom:\" && git push"
-    commitk = "!GIT_COMMITTER_NAME='Kevin Le' GIT_COMMITTER_EMAIL='solnovus@gmail.com' git commit --author 'Kevin Le <solnovus@gmail.com>'"
+    commitas = "!git commit --author '${GIT_COMMITTER_NAME} <${GIT_COMMITTER_EMAIL}>'"
     ci = commit
     lod = "!git pull origin develop"
     pod = "!git push origin develop"
