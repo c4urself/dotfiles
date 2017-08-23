@@ -1,6 +1,7 @@
 [user]
     name = Christian Verkerk
     email = christian@tubularlabs.com
+    signingkey = D413F0D3
 [alias]
     st = status
     unstage = reset HEAD --
@@ -8,7 +9,13 @@
     commitlazy = "!git commit -am \"$(curl -s http://whatthecommit.com/index.txt)\""¬
     pop = "!git reset HEAD~1 && git stash && git pull && git stash pop"
     pullup = "!git pull origin develop && git remote update origin && git submodule update"
+    bump = "!git add tubecore && git commit -m \":cherry_blossom:\" && git push"
+    commitk = "!GIT_COMMITTER_NAME='Kevin Le' GIT_COMMITTER_EMAIL='solnovus@gmail.com' git commit --author 'Kevin Le <solnovus@gmail.com>'"
     ci = commit
+    lod = "!git pull origin develop"
+    pod = "!git push origin develop"
+    lom = "!git pull origin master"
+    pom = "!git push origin master"
     up = "!git remote update -p; git merge --ff-only @{u}"
     mergelog = "!f() { git log --stat \"$1^..$1\"; }; f"
 [github]
@@ -36,4 +43,8 @@
 [core]
     editor = /usr/bin/vim
     pager = "less -s"
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
+[push]
+    default = simple
+[commit]
+    gpgsign = false
