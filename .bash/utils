@@ -9,3 +9,7 @@ source ~/.bash/utilities/z.sh
 
 # Virtual env wrapper init script
 source ~/.bash/utilities/virtualenvwrapper.sh
+
+
+# PYENV
+eval "$(pyenv init -)"
