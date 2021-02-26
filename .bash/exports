@@ -1,13 +1,20 @@
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
+
 # Manpage sections
 export LESS_TERMCAP_md="$ORANGE"
 
 # Larger bash history (allow 32³ entries; default is 500)
-export HISTSIZE=32768
+export HISTSIZE=999999999
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
-export HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_${HOSTNAME_SHORT}_$$"
+
+# Eternal history + options
+export HISTFILE="${HOME}/Dropbox/Programming/eternal_history"
+setopt EXTENDED_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
